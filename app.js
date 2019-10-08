@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 	res.render('index')
 })
 
-const port = process.env.port | 3000;
+const port = process.env.port || 3000;
 
 //Listen on port 3000
 server = app.listen(port);
