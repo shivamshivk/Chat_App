@@ -17,13 +17,10 @@ app.get('/', (req, res) => {
 const port = process.env.PORT || 3000;
 
 //Listen on port 3000
-server = app.listen(port);
-
-
+const server = app.listen(port);
 
 //socket.io instantiation
 const io = require("socket.io")(server)
-
 
 //listen on every connection
 io.on('connection', (socket) => {
